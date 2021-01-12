@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+:root {
+    --footerColor: hsl(233, 26%, 24%);
+    --BrightCyan: hsl(192, 70%, 51%);
+    --LimeGreen: hsl(136, 65%, 51%);
+
+    --LightGrayishBlue: hsl(220, 16%, 96%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --GrayishBlue: hsl(233, 8%, 62%);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 18px;   
+    color: var(--GrayishBlue);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+section#first {
+    display: flex;
+}
+
+/* TEXTOGRAPHY */
+div.box h3, div.box p {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+cite {
+    font-style: normal;
+    font-size: .5rem;
+    margin-left: 10%;
+    /* margin-top: 10%; */
+    font-weight: lighter;
+}
+h1 {
+    color: var(--footerColor);
+    font-weight: 300;
+    font-size: 2.3rem;
+    letter-spacing: .5px;
+}
+h2 {
+    color: var(--footerColor);
+    font-weight: 300;
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+h3 {
+    color: var(--footerColor);
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding: 3% 0;
+}
+.texts p {
+    font-size: .9rem;
+    padding: 15px 0 25px;
+    line-height: 1.4rem;
+}
+div.partA {
+    padding-bottom: 10px;
+}
+
+/* LINKS AND LISTS */
+header a {
+    color: var(--GrayishBlue);
+}
+footer a {
+    text-decoration: none;
+    color: var(--White);
+}
+a {
+    text-decoration: none;
+    /* color: #31d45d; */
+}
+li {
+    list-style-type: none;
+    display: inline-block;
+}
+nav.navigation-pannel {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* BUTTON */
+div.invite-btn {
+    display: inline-block;
+    color: var(--White);
+    background: #31D45D;
+    background: -webkit-linear-gradient(left, #31D45D, #2BB7DA);
+    background: -moz-linear-gradient(left, #31D45D, #2BB7DA);
+    background: linear-gradient(to right, #31D45D, #2BB7DA);
+    border-radius: 2rem;
+    padding: 15px 30px;
+    font-size: .9rem;
+    cursor: pointer;
+}
+/* Theme colors */
+footer {
+    background-color: var(--footerColor);
+    /* margin-top: 26%; */
+}
+section#first, section#third div.box, div.white {
+    background-color: var(--White);
+}
+
+.white {}
+section#second, div.grey, section#third {
+    background-color: var(--VeryLightGray);
+}
+
+/* IMAGES */
+section#third div.box {
+    /* border-radius: 0 0 10px 10px; */
+    margin: 0 7% 7%;
+    text-align: left;
+}
+section#third div.box img {
+    max-width: 100%;
+    border-radius: 5px 5px 0 0;
+    padding-bottom: 5%;
+}
+
+
+/* MOBILE REPONSIVENESS */
+@media screen and (max-width: 700px) {
+
+    /* MOBILE HAMBURGER */
+    header nav.navigation-pannel ul {
+        text-align: center;
+        position: absolute;
+        left: 4%;
+        margin-top: 20px;
+        padding: 10px 0;
+        top: 100%;
+        right: 4%;
+        border: 1px solid;
+        display: none;
+        background-color: var(--White);
+        border-radius: 5px;
+    }
+    header nav.navigation-pannel li {
+        display: block;
+        padding: 10px;
+    }
+    header nav.navigation-pannel a {
+        color:hsl(233, 26%, 24%);
+    }
+    header {
+        padding: 18px 24px;
+        position: relative;
+    }
+    main {
+        text-align: center;
+        background-color: #fafafa;
+        padding-bottom: 20%;
+    }
+    nav.navigation-pannel div.invite-btn {
+        display: none;
+    }
+    div.hamburger-menu {
+        position: relative;
+        cursor: pointer
+    }
+    svg#hamburger {
+        position: absolute;
+        right: 0px;
+        top: 4px;
+    }
+    section#first {
+        flex-direction: column-reverse;
+    }
+
+    div.image-box {
+        background-image: url(./images/bg-intro-mobile.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        width: 100%;
+    }
+    div.texts {
+        padding: 15% 9% 20%;
+    }
+    section#second {
+        padding: 20% 7% 10%;
+    }
+    section#second p {
+        font-size: .9rem;
+        line-height: 1.4rem;
+        padding-bottom: 10%;
+    }
+    div.white {
+        padding: 25% 0 5%;
+    }
+    div.box h3 {
+        font-size: 15px;
+        line-height: 1.3rem; 
+    }
+    div.box p {
+        font-size: 12px;
+        font-weight: 300;
+        padding: 1% 0 15%;
+        line-height: 1.05rem;
+    }
+    footer {
+        padding: 15%;
+        text-align: center;
+    }
+    footer nav {
+        padding: 28px 0 12px;
+    }
+    footer nav li {
+        display: unset;
+        padding: 8px;
+    }
+    footer li {
+        display: block;
+        padding: 10px;
+        font-size: .9rem;
+    }
+    div#box3 .invite-btn{
+        margin: 10% 0 7%;
+    }
+    div#box3 p {
+        font-size: .9rem;
+    }
+    
+}
