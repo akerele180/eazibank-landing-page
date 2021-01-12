@@ -103,13 +103,10 @@ div.invite-btn {
 /* Theme colors */
 footer {
     background-color: var(--footerColor);
-    /* margin-top: 26%; */
 }
 section#first, section#third div.box, div.white {
     background-color: var(--White);
 }
-
-.white {}
 section#second, div.grey, section#third {
     background-color: var(--VeryLightGray);
 }
@@ -129,30 +126,30 @@ section#third div.box img {
 
 /* MOBILE REPONSIVENESS */
 @media screen and (max-width: 700px) {
-
     /* MOBILE HAMBURGER */
     header nav.navigation-pannel ul {
         text-align: center;
         position: absolute;
-        left: 4%;
+        left: 5%;
         margin-top: 20px;
-        padding: 10px 0;
+        padding: 40px 0;
         top: 100%;
-        right: 4%;
-        border: 1px solid;
+        right: 5%;
         display: none;
         background-color: var(--White);
         border-radius: 5px;
+        box-shadow: 1px 8px 71px 43px hsl(233, 26%, 24%);
+        z-index: 10;
     }
     header nav.navigation-pannel li {
         display: block;
-        padding: 10px;
+        padding: 14px;
     }
     header nav.navigation-pannel a {
         color:hsl(233, 26%, 24%);
     }
     header {
-        padding: 18px 24px;
+        padding: 18px 30px;
         position: relative;
     }
     main {
@@ -171,17 +168,37 @@ section#third div.box img {
         position: absolute;
         right: 0px;
         top: 4px;
+        z-index: 21;
     }
     section#first {
         flex-direction: column-reverse;
     }
 
-    div.image-box {
+    div.image-box::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 85%;
+        background-position-y: 33%;
+        background-size: cover;
         background-image: url(./images/bg-intro-mobile.svg);
+        background-repeat: no-repeat;
+    }
+    div.image-box {
+        /* background-image: url(./images/image-mockups.png), url(./images/bg-intro-mobile.svg) ; 
+        background-image: url('./images/bg-intro-mobile.svg'); 
+        background-position-y: -93px;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 200px;
-        width: 100%;
+        height: 252px;
+        width: 100%;  */
+        overflow: hidden;
+    }
+    .image-box img {
+        max-width: 100%;
+        position: relative;
+        z-index: 5;
+        margin-top: -35.5%;
     }
     div.texts {
         padding: 15% 9% 20%;
@@ -230,4 +247,59 @@ section#third div.box img {
         font-size: .9rem;
     }
     
+}
+@media screen and (max-width: 672px) {
+    div.image-box::before {
+        height: 78%;
+    }   
+}
+@media screen and (max-width: 573px) {
+    div.image-box::before {
+        height: 68%;
+    }   
+}
+@media screen and (max-width: 505px) {
+    div.image-box::before {
+        height: 59%;
+    }   
+}
+@media screen and (max-width: 457px) {
+    div.image-box::before {
+        height: 55%;
+    }   
+}
+@media screen and (max-width: 432px) {
+    div.image-box::before {
+        height: 51%;
+    }   
+}
+@media screen and (max-width: 414px) {
+    div.image-box::before {
+        height: 50%;
+    }   
+}
+@media screen and (max-width: 390px) {
+    div.image-box::before {
+        height: 46%;
+    }   
+}
+@media screen and (max-width: 328px) {
+    div.image-box::before {
+        height: 39%;
+    }   
+}
+@media screen and (max-width: 292px) {
+    div.image-box::before {
+        height: 34%;
+    }   
+    header {
+        padding: 11px 7px;}
+    header nav.navigation-pannel li {
+        display: block;
+        padding: 9px;
+    }
+    header nav.navigation-pannel ul {
+        padding: 0;
+        margin-top: 7%;
+    }
 }
