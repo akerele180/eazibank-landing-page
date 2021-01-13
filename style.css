@@ -22,7 +22,9 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
 section#first {
     display: flex;
 }
@@ -99,7 +101,12 @@ div.invite-btn {
     padding: 15px 30px;
     font-size: .9rem;
     cursor: pointer;
+    text-align: center;
 }
+div.invite-btn:hover {
+    filter: brightness(1.3);
+}
+
 /* Theme colors */
 footer {
     background-color: var(--footerColor);
@@ -123,6 +130,172 @@ section#third div.box img {
     padding-bottom: 5%;
 }
 
+
+/* DESKTOP RESPONSIVENESS */
+@media screen and (min-width: 701px) {
+    header {
+        margin: 1% 5%;
+    }
+    div.hamburger-menu {
+        display: none;
+    }
+    header li {
+        padding: 0 8px;
+    }
+    header li a{
+        letter-spacing: -1.5px;
+        padding-bottom: 25px;
+    }
+    header li a:hover {
+        border-bottom: 4px solid var(--LimeGreen);
+    }
+
+    section#first {
+        overflow: hidden;
+        background-color:hsl(0, 0%, 98%);
+        margin: 0 0 0 5%;
+        display: grid;
+        grid-gap: 9%;
+        place-items: center;
+        grid-template-columns: .9fr 1.1fr;
+    }
+    div.texts {
+        transform: translateY(-47%);
+    }
+    section#first h1 {
+        font-size: 4rem;
+    }
+    section#first p {
+        font-size: 1.21rem;
+        line-height: 2rem;
+        padding: 30px 0;
+    }
+    div.image div.image-box {
+        background-image: url(./images/bg-intro-desktop.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: 17%;
+        background-position-y: -219px;
+    }
+    div.image-box img {
+        position: relative;
+        left: 17%;
+        bottom: 119px;
+    }
+
+
+    section#second {
+        margin-top: -20%;
+        padding: 8% 5%;
+        background-color:hsl(220, 16%, 96%);
+    }
+    section#second h2 {
+        font-size: 3rem;
+    }
+
+    section#second div.partA p {
+        max-width: 52%;
+        line-height: 30px;
+        padding-bottom: 2%;
+    }
+    section#second .partB {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 36.4px;
+    }
+    section#second h3, section#second p {
+        margin: 0;
+    }
+    section#second h3 {
+        padding: 8% 0;
+        font-size: 1.7rem;
+    } 
+    section#second p {
+        line-height: 25px;
+    } 
+
+    section#third {
+        background-color:var(--VeryLightGray);
+        padding: 5%;
+    }
+    div.white {
+        background-color: var(--VeryLightGray);
+    }
+    div.white h2 {
+        font-size: 2.5rem;
+        padding-bottom: 3.5%;
+    }
+    section#third div.partB {
+        display: grid;
+        grid-gap: 37px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    section#third div.box {
+        text-align: left;
+        margin: 0;
+    }
+    section#third div.box p {
+        font-size: .8rem;
+        line-height: 1.3rem;
+    }
+    section#third div.box h3 {
+        font-size: 1rem;
+    }
+    cite {
+        font-size: .7rem;
+    }
+    .edit {
+        height: 53%;
+        width: 295px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 3% 5%;
+    }
+    footer div.footer-logo, footer div#box3 div.invite-btn {
+        margin: 15px 0 27%;
+    }
+    footer div.footer-logo {
+        margin-bottom: 38%;
+    }
+    footer a:hover {
+        color: var(--LimeGreen);
+    }
+    footer .social-links svg path.green:hover {
+        fill: var(--LimeGreen);
+        
+    }
+    
+    footer nav.social-links li {
+        margin: 0 12px 0 0;
+    }
+    footer div#box2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 80px;
+        margin-right: 20%;
+    }
+    footer div#box2 ul {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    footer div#box2 li {
+        padding: 15px;
+    }
+    footer div#box3 {
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-end;
+    }
+    footer div#box3 p {
+        font-size: .7rem;
+        margin-top: 11px;
+    }
+}
 
 /* MOBILE REPONSIVENESS */
 @media screen and (max-width: 700px) {
@@ -157,7 +330,7 @@ section#third div.box img {
         background-color: #fafafa;
         padding-bottom: 20%;
     }
-    nav.navigation-pannel div.invite-btn {
+    div.invite-btn {
         display: none;
     }
     div.hamburger-menu {
@@ -252,6 +425,19 @@ section#third div.box img {
     div.image-box::before {
         height: 78%;
     }   
+}
+@media screen and (max-width: 700px) and (min-width: 674px){
+    h1 {
+        font-size: 3.5rem;
+    }
+    div.texts p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-top: 10px;
+    }
+    img.edit {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 573px) {
     div.image-box::before {
