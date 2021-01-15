@@ -340,7 +340,7 @@ section#third div.box img {
     svg#hamburger {
         position: absolute;
         right: 0px;
-        top: 4px;
+        bottom: -4px;
         z-index: 21;
     }
     section#first {
